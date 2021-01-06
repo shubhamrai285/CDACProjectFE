@@ -1,0 +1,26 @@
+<form #myForm="ngForm" (ngSubmit)="OnUpdateCallMe(myForm)">
+    <legend>Edit Employee</legend>
+
+    <div class="form-group">
+        <label for="ChangeService">ChangeService</label>
+        <input type="text" class="form-control" id="ChangeService" name="ChangeService" placeholder="Enter ChangeService"  [(ngModel)]="emp.No" >
+    </div>
+
+  
+
+    <div class="form-group">
+        <label for="Photo">Photo</label>
+        <input type="file" class="form-control" id="Photo" name="Photo" placeholder="Enter Photo" [(ngModel)]="emp.Age" >
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    
+    <button type="button" class="btn btn-danger" (click)="CancelUpdate()">Cancel</button>
+    
+
+</form>
+
+
+
+
+

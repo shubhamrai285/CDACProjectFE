@@ -1,0 +1,50 @@
+
+
+<div class="container" >
+
+
+   
+
+    <div style="align-items: center; padding-left: 4.25cm;">
+            <form #loginForm="ngForm" (ngSubmit)="SignIn(loginForm)" >
+            <h3 style="margin-left: 80px;">Customer Login</h3>
+
+            <div class="form-group ">
+                    <label for="Mobile">Mobile</label>
+                    <input required [(ngModel)]="user.Mobile" type="text" class="form-control " style="width: 300px;" id="Mobile" name="Mobile" placeholder="Enter Mobile">
+                    
+                </div>
+            
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input required  [(ngModel)]="user.Password" type="password" style="width: 300px;" class="form-control" id="Password"  name="Password" placeholder="Enter Password Here">
+                </div>
+            
+                <div class="form-group">
+                    <div class="checkbox"> 
+                        <label>
+                            <input type="checkbox"> Remember me ?
+                            <a  style="margin-left: 50px;"  routerLink="/forgetpassword">Forget Password</a>
+
+                        </label>
+
+                    </div>
+                </div>
+              
+                
+
+    <button type="submit"  style="margin:10px;" class="btn btn-success">Login</button>
+    <a routerLink="/home" style="margin:15px" class="btn btn-danger">Cancel</a>
+    <a class="btn btn-warning" routerLink="/register">Register</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="label label-danger">{{message}}</span>
+    
+ 
+
+
+</form>
+  
+</div>
+</div>
+
+
+

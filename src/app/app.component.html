@@ -1,0 +1,51 @@
+<div class="topnav">
+    <a  class="active"routerLink="/home">Home</a>
+    <a   *ngIf="service.IsProviderLoggedIn()" routerLink="/requests">Requests</a>
+    <a   *ngIf="service.IsProviderLoggedIn()" routerLink="/Pprofile">Profile</a>
+            <a   *ngIf="service.IsLoggedIn() ||!service.IsProviderLoggedIn() || service.IsAdminLoggedIn() " routerLink="/services">Services</a>
+
+
+    <a  *ngIf="service.IsAdminLoggedIn()" routerLink="/providerlist">Providers</a>
+    <a  *ngIf="service.IsAdminLoggedIn()" routerLink="/customers">Customers</a>  
+    <a *ngIf="service.IsLoggedIn()  ||!service.IsProviderLoggedIn() || !service.IsAdminLoggedIn()"  routerLink="/about">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a  *ngIf="service.IsAdminLoggedIn()" routerLink="/addservice">Add Service</a>
+    <div class="topnav-right">
+            <li  *ngIf="!service.IsLoggedIn() &&  !service.IsAdminLoggedIn() && !service.IsProviderLoggedIn()">
+                    <a routerLink="/login">Login/Sign Up</a>
+                </li>
+                <li  *ngIf="(service.IsLoggedIn() &&  !service.IsAdminLoggedIn() ) || (!service.IsLoggedIn() &&  service.IsAdminLoggedIn())">
+                    <button type="button" style="margin-right: +10px; margin-top: +10px;" class="btn btn-primary" (click)="signout()">Logout</button>            
+                </li>
+                <li  *ngIf=" service.IsProviderLoggedIn()">
+                    <button type="button" style="margin-right: +10px; margin-top: +10px;" class="btn btn-primary" (click)="signout()">Logout</button>            
+                </li>
+                
+                
+       </div> 
+  </div>
+
+<router-outlet></router-outlet>
+
+
+<div class="panel panel-default" style="margin-bottom: -10px;">
+      
+      <div class="panel-footer " style="background-color: black; height: 100px;">
+      <a routerLink="/about">About Us</a> &nbsp;&nbsp;&nbsp;&nbsp;
+      <a routerLink="/contact">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a routerLink="/services">Services</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="">Terms & Conditions</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="">&copy;Copyright</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+
+<table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Request No</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Date</th>
+                <th>Accept Request</th>
+                <th>Cancel Request</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of request;index as i">
+               
+                <td>{{i+1}}</td>
+                <td>{{item.cust.fname}}</td>
+                <td>{{item.addr.locality}},{{item.addr.city}},{{item.addr.pincode}}</td>
+                <td>{{item.date}}</td>
+                <td><a routerLink="/">Accept Request</a></td>
+                <td><a routerLink="/">Cancel Request</a></td>
+            </tr>
+          
+        </tbody>
+    </table>
+    

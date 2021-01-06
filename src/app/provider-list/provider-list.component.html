@@ -1,0 +1,29 @@
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Photo</th>
+            <th>FName</th>
+            <th>LName</th>
+            <th>Mobile</th>
+            <th>Password</th>
+            <th>Edit</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pro of provider">
+            <td style="padding-top: +20px;">{{pro.id}}</td>
+            <td><img src="data:image/gif;base64,{{pro.images}}" alt="Avatar" style="width:90px;height: 60px;">
+            </td>
+            <td style="padding-top: +20px;">{{pro.fname}}</td>
+            <td style="padding-top: +20px;">{{pro.lname}}</td>
+            <td style="padding-top: +20px;">{{pro.mobile}}</td>
+            <td style="padding-top: +20px;">{{pro.password}}</td>
+            <td style="padding-top: +20px;"><a routerLink="/edit">Edit</a></td>
+            <td style="padding-top: +20px;"> <a routerLink="/delete/1">Remove</a></td>
+        </tr>
+        
+    </tbody>
+</table>

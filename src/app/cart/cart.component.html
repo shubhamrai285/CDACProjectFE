@@ -1,0 +1,32 @@
+<br>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Service Provider</th>
+            <th>Name</th>
+            <th>Service Selected</th>
+            <th>Select Date</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr >
+            <td><img src="data:image/gif;base64,{{provider.images}}" alt="Avatar" style="width:90px;height: 100px;">
+            </td>
+            <td style="padding-top: +50px;">{{provider.fname}}</td>
+            <td style="padding-top: +50px;">{{servicename}}</td>
+            <td style="padding-top: +50px;"><input type="date" [(ngModel)]="date" name="date" id="date" (input)="onSearchChange()"> </td>
+            <td style="padding-top: +50px;">Rs: {{price}}</td>
+        </tr>
+    </tbody>
+</table>
+<a href="/payment/{{userid}}/{{provider.id}}">
+<button   style="margin-left: 700px;" type="button" class="btn btn-sm btn-danger">Make Payment</button>
+</a> 
+<br>
+<br>
+<br>
+<br>
+<br>
+

@@ -1,0 +1,40 @@
+
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th> Service Category</th>
+            <th>Service Name</th>
+            <th>Service Price</th>
+            <th>Service Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <select [(ngModel)]="service.category" class="form-control" id="sel1" name="category"  style="width: 200px;">
+
+                        <option >Electrician</option>
+                      <option>Carpenter</option>
+                      <option>Plumber</option>
+                      <option>HomeAppliance</option>
+                    </select>
+
+            <td>
+               <input type="text"[(ngModel)]=service.name name="ServiceName" id="ServiceName" placeholder="Add Serviced name" > 
+            </td>
+            <td>
+                <input type="number"[(ngModel)]=service.price name="ServiceName" id="ServiceName" placeholder="Add Serviced price" > 
+             </td>
+             <td>
+                <input (change)="onSelectFile($event)" style="border: none" type="file" class="form-control">
+            </td>
+            <td>
+                
+              
+                
+                <input class="btn btn-danger" type="button" (click)="addservice()" value="Add">
+            </td>
+        </tr>
+    </tbody>
+</table>
+

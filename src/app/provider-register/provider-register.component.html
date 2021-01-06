@@ -1,0 +1,98 @@
+<body style="background-color: rgb(231, 247, 248);">
+<div class="container">
+    
+        <div style="align-items: center; padding-left: 4.25cm;">
+
+
+<form #myForm="ngForm" (ngSubmit)="OnAddCallMe(myForm)">
+        <legend>Sign Up</legend>
+    
+        <div class="form-group">
+            <label for="FName">First Name</label>
+            <!-- <input [(ngModel)]="register.fname" type="text" class="form-control" style="width: 300px;" id="FName" name="FName" placeholder="Enter First Name"> -->
+            <input ngModel type="text" class="form-control" style="width: 300px;" id="FName" name="FName" placeholder="Enter First Name">
+
+        </div>
+    
+        <div class="form-group">
+            <label for="LName">Last Name</label>
+            <!-- <input [(ngModel)]="register.lname" type="text" class="form-control" style="width: 300px;" id="LName" name="LName" placeholder="Enter Last Name"> -->
+            <input ngModel type="text" class="form-control" style="width: 300px;" id="LName" name="LName" placeholder="Enter Last Name">
+
+        </div>
+    
+        <div class="form-group">
+            <label for="Mobile">Mobile No</label>
+            <!-- <input [(ngModel)]="register.mobile" type="tel" class="form-control"style="width: 300px;" id="Mobile" name="Mobile" placeholder="Enter Mobile No"> -->
+            <input ngModel type="tel" class="form-control"style="width: 300px;" id="Mobile" name="Mobile" placeholder="Enter Mobile No">
+
+        </div>
+
+        <div class="form-group">
+            <label for="Email">Email id</label>
+            <!-- <input [(ngModel)]="register.mobile" type="tel" class="form-control"style="width: 300px;" id="Mobile" name="Mobile" placeholder="Enter Mobile No"> -->
+            <input ngModel type="email" class="form-control"style="width: 300px;" id="Email" name="Email" placeholder="Enter Email id">
+
+        </div>
+        <div class="form-group">
+            <label for="Password">Password</label>
+            <!-- <input [(ngModel)]="register.password" type="password" class="form-control" style="width: 300px;" id="Password" name="Password" placeholder="Enter Password"> -->
+            <input ngModel type="password" class="form-control" style="width: 300px;" id="Password" name="Password" placeholder="Enter Password">
+
+        </div>
+        <div class="form-group">
+                <label for="State">State</label>
+                <!-- <input [(ngModel)]="register.address.state" type="text" class="form-control" style="width: 300px;" id="State" name="State" placeholder="Enter State"> -->
+                <input ngModel type="text" class="form-control" style="width: 300px;" id="State" name="State" placeholder="Enter State">
+
+            </div>
+        <div class="form-group">
+                <label for="City">City</label>
+                <!-- <input [(ngModel)]="register.address.city" type="text" class="form-control" style="width: 300px;" id="City" name="City" placeholder="Enter City"> -->
+                <input ngModel type="text" class="form-control" style="width: 300px;" id="City" name="City" placeholder="Enter City">
+
+            </div>
+            <div class="form-group">
+                    <label for="Locality">Locality</label>
+                    <!-- <input [(ngModel)]="register.address.locality" type="text" class="form-control" style="width: 300px;" id="Locality" name="Locality" placeholder="Enter Locality"> -->
+                    <input ngModel type="text" class="form-control" style="width: 300px;" id="Locality" name="Locality" placeholder="Enter Locality">
+
+                </div>
+                <div class="form-group">
+                        <label for="PinCode">PinCode</label>
+                        <!-- <input [(ngModel)]="register.address.pincode" type="tel" class="form-control" style="width: 300px;" id="PinCode" name="PinCode" placeholder="Enter PinCode"> -->
+                        <input ngModel type="tel" class="form-control" style="width: 300px;" id="PinCode" name="PinCode" placeholder="Enter PinCode">
+
+                    </div>
+                   
+            <div class="form-group">
+                    <label for="sel1">Service Type</label>
+                    <!-- <select [(ngModel)]="register.pservice.sname" class="form-control" id="sel1" name="sel1"  style="width: 200px;"> -->
+                        <select ngModel class="form-control" id="sel1" name="servicename"  style="width: 200px;">
+
+                        <option >Electrician</option>
+                      <option>Carpenter</option>
+                      <option>Plumber</option>
+                      <option>HomeAppliance</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                  <label for=""><b>Profile Picture</b></label>
+    <input (change)="onSelectFile($event)" style="border: none" type="file" class="form-control">
+</div>
+        <button type="submit" class="btn btn-success">Sign Up</button>
+        
+        
+            
+        <span class="label label-warning">{{message}}</span>
+        
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-danger" (click)="GoBackHome()">Go Back to Home</button>
+</form>
+    
+</div>
+    
+</div>    
+    
+</body>
